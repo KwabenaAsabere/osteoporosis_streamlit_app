@@ -11,10 +11,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 import joblib
 import streamlit as st
 
-osteoporosis = pd.read_csv(
-    r"C:\Users\KAsab\Desktop\MACHINE LEARNING PROJECTS\osteoporosis_ML_classification\cleaned_survey.csv"
-)
-
+osteoporosis = pd.read_csv("cleaned_survey.csv")
 num_pipeline = Pipeline(
     [("imputer", SimpleImputer(strategy="mean")), ("scaler", StandardScaler())]
 )
